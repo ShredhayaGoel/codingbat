@@ -1,0 +1,20 @@
+public boolean endOther(String a, String b) {
+ a = a.toLowerCase();
+ b = b.toLowerCase();
+ 
+ int a1 = a.length();
+ int b1 = b.length();
+ 
+ if(a1 <= b1){
+    if(a.substring(0,a1).equals(b.substring(b1-a1))){
+return true;
+}
+ }
+ 
+ if(b1 <= a1){
+   if(b.substring(0,b1).equals(a.substring(a1-b1))){
+     return true;
+   }
+ }
+ return false;
+}
